@@ -1,8 +1,6 @@
 package dev.nebula.client;
 
-import dev.nebula.client.event.EventManager;
 import dev.nebula.module.ModuleManager;
-import dev.nebula.module.Setting;
 import net.minecraft.client.Minecraft;
 
 public class Nebula {
@@ -12,25 +10,19 @@ public class Nebula {
     public static final Minecraft mc = Minecraft.getInstance();
 
     private ModuleManager moduleManager;
-    private EventManager eventManager;
-    private Setting setting;
 
     public void startup() {
         INSTANCE = this;
         moduleManager = new ModuleManager();
-        eventManager = new EventManager();
-        setting = new Setting("DefaultSetting", "default"); // Добавляем необходимые параметры
+    }
+
+    public void onTick() {
+        if(moduleManager != null) {
+            moduleManager.tick();
+        }
     }
 
     public ModuleManager getModuleManager() {
         return moduleManager;
-    }
-
-    public EventManager getEventManager() {
-        return eventManager;
-    }
-
-    public Setting getSetting() {
-        return setting;
     }
 }

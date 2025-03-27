@@ -6,6 +6,7 @@ public class Start
 {
     public static void main(String[] args)
     {
+        new Nebula().startup();
         String assets = System.getenv().containsKey("assetDirectory") ? System.getenv("assetDirectory") : "assets";
         Main.main(concat(new String[] {"--version", "mcp", "--accessToken", "0", "--assetsDir", assets, "--assetIndex", "1.16", "--userProperties", "{}"}, args));
     }

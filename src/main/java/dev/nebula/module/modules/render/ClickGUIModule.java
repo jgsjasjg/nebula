@@ -17,6 +17,6 @@ public class ClickGUIModule extends Module {
     @Override
     public void onEnable() {
         mc.displayGuiScreen(clickGUI);
-        this.toggle(); // Выключаем модуль после открытия GUI
+        this.toggle();
     }
 }
