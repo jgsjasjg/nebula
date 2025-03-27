@@ -1,21 +1,15 @@
-.gradle
+# IDE files
+.idea/
+*.iml
+.vscode/
+
+# Gradle
+.gradle/
 build/
 
-# Source code
-src/*
-
-#Run files
-runclient
-
-# Ignore Gradle GUI config
-gradle-app.setting
-
-# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
-!gradle-wrapper.jar
-
-#IDE files
-.idea
-*.iml
+# Run folders
 run/
-
 out/
+
+# Avoid ignoring Gradle wrapper jar file
+!gradle-wrapper.jar
